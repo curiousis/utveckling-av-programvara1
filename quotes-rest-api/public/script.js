@@ -1,7 +1,12 @@
+const container = document.querySelector("#quote-container");
 fetchdata();
 
 async function fetchdata() {
   const response = await fetch("/api/quote");
   const data = await response.json();
-  console.log(data);
+
+  container.innerHTML = `
+    <p class="quote">"${data.quote}"</p>
+    <p class="author">- ${data.author} -</p>
+  `;
 }
