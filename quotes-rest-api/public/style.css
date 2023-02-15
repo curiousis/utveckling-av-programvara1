@@ -10,6 +10,7 @@ body{
     height: 100vh;
     font-family: 'Courgette', cursive;
     background-color: #66475C;
+
 }
 .quote{
     color: #E3B1D5;
@@ -30,4 +31,5 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1.2rem;
 }
