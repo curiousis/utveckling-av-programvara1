@@ -26,6 +26,7 @@ body{
     padding: 10px;
 }
 .author span{
+    width: 32px;
     font-size: 40px;
 }
 #quote-container{
