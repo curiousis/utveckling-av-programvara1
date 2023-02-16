@@ -1,5 +1,5 @@
 const button = document.querySelector("button");
-
+const messageContainer = document.querySelector("#message-container");
 button.addEventListener("click", (e) => {
   e.preventDefault();
   const message = document.querySelector("#message").value;
@@ -15,4 +15,18 @@ button.addEventListener("click", (e) => {
     });
   }
   postMessage();
+  fetchMessages();
 });
+
+async function fetchMessages() {
+  const response = await fetch("/api/messages");
+  const data = await response.json();
+  let message = "";
+  messageContainer.innerHTML = `
+
+  ${data.map((message) => `<p>${message.message}</p>`).join("")}
+  `;
+}
+fetchMessages();
+
+window.setInterval(fetchMessages, 30);

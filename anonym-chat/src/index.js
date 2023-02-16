@@ -9,6 +9,7 @@ server.use(express.json({ extended: true, limit: "1mb" }));
 server.post("/api/messages", (request, response) => {
   messages.push(request.body);
   console.log(messages);
+  response.status(200).end();
 });
 server.get("/api/messages", (request, response) => {
   response.status(200).json(messages);
