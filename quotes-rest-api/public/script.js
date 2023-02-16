@@ -7,6 +7,6 @@ async function fetchdata() {
 
   container.innerHTML = `
     <p class="quote">"${data.quote}"</p>
-    <p class="author">- ${data.author} -</p>
+    <p class="author"><span>-</span> ${data.author} <span>-</span> </p>
   `;
 }

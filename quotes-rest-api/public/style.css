@@ -25,6 +25,9 @@ body{
     opacity: 60%;
     padding: 10px;
 }
+.author span{
+    font-size: 40px;
+}
 #quote-container{
     display: flex;
     justify-content: center;
