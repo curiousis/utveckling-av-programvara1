@@ -3,8 +3,8 @@ const messageContainer = document.querySelector("#message-container");
 button.addEventListener("click", (e) => {
   e.preventDefault();
   const message = document.querySelector("#message").value;
-  console.log(message);
-  const data = { message };
+  const date = new Date();
+  const data = { message, date };
   async function postMessage() {
     await fetch("/api/messages", {
       method: "POST",
@@ -21,10 +21,16 @@ button.addEventListener("click", (e) => {
 async function fetchMessages() {
   const response = await fetch("/api/messages");
   const data = await response.json();
-  let message = "";
   messageContainer.innerHTML = `
 
-  ${data.map((message) => `<p>${message.message}</p>`).join("")}
+  ${data
+    .map(
+      (message) =>
+        `<p><span class="date-span">${new Date(
+          message.date
+        ).toLocaleString()}</span><span>${message.message}</span></p>`
+    )
+    .join("")}
   `;
 }
 fetchMessages();

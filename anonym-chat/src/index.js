@@ -7,6 +7,7 @@ server.use(express.json({ extended: true, limit: "1mb" }));
 
 //post route
 server.post("/api/messages", (request, response) => {
+  let date = new Date();
   messages.push(request.body);
   console.log(messages);
   response.status(200).end();
