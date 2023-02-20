@@ -3,8 +3,7 @@ const messageContainer = document.querySelector("#message-container");
 button.addEventListener("click", (e) => {
   e.preventDefault();
   const message = document.querySelector("#message").value;
-  const date = new Date();
-  const data = { message, date };
+  const data = { message };
   async function postMessage() {
     await fetch("/api/messages", {
       method: "POST",
@@ -27,7 +26,7 @@ async function fetchMessages() {
     .map(
       (message) =>
         `<p><span class="date-span">${new Date(
-          message.date
+          message.timeStamp
         ).toLocaleString()}</span><span>${message.message}</span></p>`
     )
     .join("")}

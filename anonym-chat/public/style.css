@@ -24,6 +24,9 @@ body{
     flex-direction: column;
     padding: 16px 32px;
 }
+#message-container span + span{
+    font-size: 20px;
+}
 form{
     min-width: 700px;
 }
@@ -47,4 +50,5 @@ button{
 }
 .date-span{
     color: #8b8b8b;
+    font-size: 14px;
 }
