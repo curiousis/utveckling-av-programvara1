@@ -15,7 +15,7 @@ body{
 }
 #message-container p{
     padding: 8px;
-    margin: 16px;
+    margin: 16px 0;
     background-color: #dbdbdb;
     border-radius: 27.5px 27.5px 27.5px 0;
     color: #000;

@@ -34,4 +34,4 @@ async function fetchMessages() {
 }
 fetchMessages();
 
-window.setInterval(fetchMessages, 30);
+window.setInterval(fetchMessages, 300);
