@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 3.5rem auto;
+}
+table{
+    width: 100%;
+}
+table tr td{
+    padding: .5rem;
+}
+tr{
+    width: 100%;
+    text-align: center;
+    border: 2px black solid;
+}
+tr:nth-child(even){
+    background-color: grey;
+    color: #fff;
+}
