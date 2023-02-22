@@ -14,7 +14,8 @@ server.post("/api/messages", (request, response) => {
     timeStamp: new Date().getTime(),
   };
   messages.push(newMessage);
-  response.status(200).json(messages);
+  response.status(200).json(newMessage);
+  console.log(newMessage);
 });
 server.get("/api/messages", (request, response) => {
   response.status(200).json(messages);
