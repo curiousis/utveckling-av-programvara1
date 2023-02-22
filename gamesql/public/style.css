@@ -17,9 +17,8 @@ table{
 table tr td{
     padding: .5rem;
     text-align: center;
-    border: .5px #323232 solid;
 }
 tr:nth-child(even){
-    background-color: #593030;
+    background-color: #685858;
     color: #fff;
 }
