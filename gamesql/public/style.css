@@ -9,19 +9,17 @@ body{
     align-items: center;
     max-width: 90%;
     margin: 3.5rem auto;
+    font: 1rem sans-serif;
 }
 table{
-    width: 100%;
+    min-width: 100%;
 }
 table tr td{
     padding: .5rem;
-}
-tr{
-    width: 100%;
     text-align: center;
-    border: 2px black solid;
+    border: .5px #323232 solid;
 }
 tr:nth-child(even){
-    background-color: grey;
+    background-color: #593030;
     color: #fff;
 }
