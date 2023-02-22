@@ -7,8 +7,11 @@ const { db } = require("./database");
 server.use(express.static("public"));
 
 server.get("/api/games", (request, response) => {
-  response.status(200).json(db);
+  db.query("SELECT * FROM games", (err, rows) => {
+    response.status(200).json(rows);
+  });
 });
+
 server.listen(3000, () => {
   console.log("Server Running...");
 });
