@@ -9,6 +9,7 @@ server.get("/api/pokemon", (request, response) => {
     response.status(200).json(rows);
   });
 });
+
 server.listen(3000, () => {
   console.log("Server running...");
 });
