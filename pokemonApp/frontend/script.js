@@ -1,9 +1,13 @@
 const container = document.querySelector("#pokemon-container");
 
+fetchPokemon();
 async function fetchPokemon() {
   const response = await fetch("/api/pokemon");
   const pokemons = await response.json();
+  displayPokemon(pokemons);
+}
 
+function displayPokemon(pokemons) {
   container.innerHTML = `
   ${pokemons
     .map(
@@ -15,4 +19,3 @@ async function fetchPokemon() {
     )
     .join("")}`;
 }
-fetchPokemon();
