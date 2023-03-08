@@ -15,19 +15,12 @@ function filterPokemon() {
     e.preventDefault();
 
     const name = form.querySelector("input").value;
-    const search = { name: name };
-
-    const response = await fetch("/api/pokemon/search", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(search),
-    });
+    const response = await fetch("/api/pokemon/search?name=" + name);
     const data = await response.json();
     displayPokemon(data);
   });
 }
+
 filterPokemon();
 
 function displayPokemon(pokemons) {

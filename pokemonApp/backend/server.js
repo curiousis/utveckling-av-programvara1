@@ -14,10 +14,10 @@ server.get("/api/pokemon", (request, response) => {
   });
 });
 
-server.post("/api/pokemon/search", (request, response) => {
+server.get("/api/pokemon/search", (request, response) => {
   db.query(
     "SELECT * FROM pokemon WHERE name LIKE ?",
-    ["%" + request.body.name + "%"],
+    ["%" + request.query.name + "%"],
     (error, rows) => {
       response.json(rows);
     }
