@@ -1,3 +1,5 @@
+//const e = require("express");
+
 const container = document.querySelector("#pokemon-container");
 
 fetchPokemon();
@@ -6,6 +8,27 @@ async function fetchPokemon() {
   const pokemons = await response.json();
   displayPokemon(pokemons);
 }
+
+function filterPokemon() {
+  const form = document.querySelector("#search");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector("input").value;
+    const search = { name: name };
+
+    const response = await fetch("/api/pokemon/search", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(search),
+    });
+    const data = await response.json();
+    displayPokemon(data);
+  });
+}
+filterPokemon();
 
 function displayPokemon(pokemons) {
   container.innerHTML = `

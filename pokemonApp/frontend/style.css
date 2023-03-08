@@ -51,4 +51,5 @@ img{
 #search-container button:hover,button:focus{
     cursor: pointer;
     background-color: #ababab;
+    color: #fff;
 }
