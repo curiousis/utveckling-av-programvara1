@@ -26,7 +26,7 @@ function displayData(array) {
     ${array
       .map(
         (data) =>
-          `<tr >
+          `<tr>
             <td >${data.country}</td>
             <td >${data.year}</td>
             <td >${data.averageTemperature}</td>
