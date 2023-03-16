@@ -23,3 +23,31 @@ async function fetchPokemonData() {
 }
 
 fetchPokemonData();
+editPokemonData();
+
+function editPokemonData() {
+  const editButton = document.querySelector("#save-changes-button");
+  const newName = document.querySelector("#name");
+  const newHeight = document.querySelector("#height");
+  const newWeight = document.querySelector("#weight");
+  const newBaseExperience = document.querySelector("#base_experience");
+
+  editButton.addEventListener("click", () => {
+    const id = window.location.pathname.split("/").slice(-1)[0];
+    const data = {
+      id: id,
+      name: newName.value,
+      height: newHeight.value,
+      weight: newWeight.value,
+      base_experience: newBaseExperience.value,
+    };
+
+    fetch("/api/info/update", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  });
+}

@@ -1,3 +1,4 @@
+const { log } = require("console");
 const { response } = require("express");
 const express = require("express");
 const { request } = require("http");
@@ -34,8 +35,21 @@ server.post("/api/info", (request, response) => {
 });
 
 server.put("/api/info/update", (request, response) => {
-  response.json({ msg: request.body });
+  const query = db.query(
+    "UPDATE pokemon SET name = ?, height= ?, weight = ?, base_experience = ? WHERE id = ?",
+    [
+      request.body.name,
+      request.body.height,
+      request.body.weight,
+      request.body.base_experience,
+      request.body.id,
+    ],
+    (error, row) => {
+      response.json(row);
+    }
+  );
 });
+
 server.delete("/api/delete", (request, response) => {
   response.json({ msg: "Deleted" });
 });
