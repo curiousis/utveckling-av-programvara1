@@ -1,6 +1,6 @@
 const container = document.querySelector("#container");
 const pokemonId = window.location.pathname.split("/").slice(-1)[0];
-
+const deleteButton = document.querySelector("#delete-button");
 async function fetchPokemonData() {
   const response = await fetch("/api/pokemon/info/" + pokemonId);
   const data = await response.json();
@@ -42,12 +42,23 @@ function editPokemonData() {
       base_experience: newBaseExperience.value,
     };
 
-    fetch("/api/info/update", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    function fetchFunction(method, urlextension) {
+      fetch("/api/info/" + urlextension, {
+        method: method,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+    }
+
+    fetchFunction("PUT", "update");
   });
 }
+
+deleteButton.addEventListener("click", () => {
+  const pokemonId = window.location.pathname.split("/").slice(-1)[0];
+  fetch("/api/delete/" + pokemonId, {
+    method: "DELETE",
+  });
+});

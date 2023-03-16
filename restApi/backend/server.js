@@ -30,8 +30,19 @@ server.get("/api/pokemon/info/:id", (request, response) => {
   );
 });
 
-server.post("/api/info", (request, response) => {
-  response.json({ msg: request.body });
+server.post("/api/add", (request, response) => {
+  db.query(
+    "INSERT INTO pokemon(name ,height, weight , base_experience ) VALUES(?,?,?,?)",
+    [
+      request.body.name,
+      request.body.height,
+      request.body.weight,
+      request.body.base_experience,
+    ],
+    (error, row) => {
+      response.json(row);
+    }
+  );
 });
 
 server.put("/api/info/update", (request, response) => {
@@ -50,8 +61,14 @@ server.put("/api/info/update", (request, response) => {
   );
 });
 
-server.delete("/api/delete", (request, response) => {
-  response.json({ msg: "Deleted" });
+server.delete("/api/delete/:id", (request, response) => {
+  db.query(
+    "DELETE FROM pokemon WHERE id = ?",
+    [request.params.id],
+    (error, feedBack) => {
+      response.json(feedBack);
+    }
+  );
 });
 
 server.listen(3000, () => {

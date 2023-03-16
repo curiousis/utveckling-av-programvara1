@@ -8,7 +8,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div id="intro-container">
+      <h1>Hello Fan of Pokemon</h1>
+      <p>
+        Find and explore the list of all pokemons below. By clicking on a
+        pokemon, you will be able to discover more about the selected pokemon.
+        That is, their qualities. Go ahead and explore!!!
+      </p>
+      <p>
+        If at all you find anything wrong with the provided details about a
+        pokemon, go ahead and edit it. And if there's any pokemon that's
+        missing, go ahead and add it.
+      </p>
+    </div>
+    <div id="post-container">
+      <h2>Add Pokemon</h2>
+      <form>
+        <div id="post-input-container">
+          <input type="text" placeholder="Enter pokemon name here" id="name" />
+          <input
+            type="number"
+            placeholder="Enter pokemon height here"
+            id="height"
+          />
+          <input
+            type="number"
+            placeholder="Enter pokemon weight here"
+            id="weight"
+            name="weight"
+          />
+          <input
+            type="number"
+            placeholder="Enter pokemon base experience here"
+            id="base_experience"
+          />
+          <button type="button" id="add-button">Add</button>
+        </div>
+      </form>
+    </div>
     <div id="pokemon-container"></div>
     <script src="script.js"></script>
   </body>
