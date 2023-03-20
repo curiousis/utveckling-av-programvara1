@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: aquamarine;
+}
+span{
+    font-weight: 500;
+    color: #638d56;
+}
+body,#span-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#message{
+    padding: .5rem;
+    border: 1.5px solid #638d56;
+    outline: 1.5px solid #638d56;
+    border-radius: 10px;
+    width: 60%;
+    font-size: 1.2rem;
+    
+}
+#span-container{
+    font-weight: bold;
+}
