@@ -4,7 +4,22 @@ const cookieParser = require("cookie-parser");
 const { request, response } = require("express");
 const server = express();
 const path = require("path");
+const { db } = require("./db");
+const MySQLStore = require("express-mysql-session")(session);
 
+server.use(
+  session({
+    secret: "israoqwemwmsdlsadlkadslopsdjwk",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: true,
+      httpOnly: true,
+      sameSite: true,
+      maxAge: 1000 * 60 * 60,
+    },
+  })
+);
 server.use(cookieParser());
 server.use(express.urlencoded());
 server.use(express.json());
