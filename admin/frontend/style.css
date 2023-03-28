@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 80%;
+    background-color: #d2fcfc;
+}
+body,main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    margin:  5rem auto;
+    justify-content: space-evenly;
+}
