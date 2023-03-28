@@ -25,9 +25,8 @@ server.use(
 );
 
 server.get("/admin", (request, response) => {
-  if (sessionData.user) {
+  if (sessionData) {
     response.sendFile(path.resolve("frontend/admin.html"));
-    console.log(request.sessionID);
   } else {
     response.redirect("back");
   }
