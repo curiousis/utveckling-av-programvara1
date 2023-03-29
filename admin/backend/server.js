@@ -53,6 +53,11 @@ server.post("/api/login", (request, response) => {
   );
 });
 
+server.get("/logout", (request, response) => {
+  sessionData = null;
+  response.redirect("/");
+});
+
 server.listen(3000, () => {
   console.log("Server Running...");
 });
