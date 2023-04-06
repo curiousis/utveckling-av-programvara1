@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1.8rem;
+    gap: 1.2rem;
+    background-color: #bfb1cb;
+}
+input{
+    width: 60%;
+    padding: .5rem;
+
+}
+input,button{
+    border: 1px #717171 solid;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+button{
+    width: 10rem;
+    height: 2rem;
+    background: #c07afe;
+}
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
