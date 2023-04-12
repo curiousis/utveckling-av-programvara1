@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      Welcome to my simple Lotto game. You're going to pick 7 numbers from 1 to
+      35. After chosing your numbers, click on the guess button to check how
+      many numbers you got correct
+    </p>
+    <form id="guess-form">
+      <input
+        type="number"
+        id="guess1"
+        min="1"
+        max="35"
+        required
+        placeholder="pick a number"
+      />
+      <input
+        type="number"
+        id="guess2"
+        min="1"
+        max="35"
+        required
+        placeholder="pick a number"
+      />
+      <input
+        type="number"
+        id="guess3"
+        min="1"
+        max="35"
+        required
+        placeholder="pick a number"
+      />
+      <input
+        type="number"
+        id="guess4"
+        min="1"
+        max="35"
+        required
+        placeholder="pick a number"
+      />
+      <input
+        type="number"
+        id="guess5"
+        min="1"
+        max="35"
+        required
+        placeholder="pick a number"
+      />
+      <input
+        type="number"
+        id="guess6"
+        min="1"
+        max="35"
+        required
+        placeholder="pick a number"
+      />
+      <input
+        type="number"
+        id="guess7"
+        min="1"
+        max="35"
+        required
+        placeholder="pick a number"
+      />
+      <p class="result"></p>
+      <button type="submit">Gissa</button>
+    </form>
+
+    <button id="replay-button">Spela igen</button>
+    <script src="script.js"></script>
+  </body>
+</html>
