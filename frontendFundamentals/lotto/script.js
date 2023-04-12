@@ -39,7 +39,8 @@ function submitNumbers(event) {
   const randomNumbers = generateRandomNumbers();
 
   correctCount = compareNumbers(userNumbers, randomNumbers);
-
+  result.style.display = "block";
+  playAgainButton.style.display = "block";
   result.innerHTML = `You got ${correctCount} out of 7`;
 }
 

@@ -37,4 +37,8 @@ form > input,button{
 .result{
     text-align: center;
     color: blue;
+    display: none;
+}
+#replay-button{
+    display: none;
 }
