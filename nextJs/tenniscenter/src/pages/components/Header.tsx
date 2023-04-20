@@ -6,18 +6,18 @@ const Header = () => {
   return (
     <header className='flex justify-between item-center w-full p-4' id={style.header}>
         <div className={style.logo}>
-            <h3>TennisCenter</h3>
+            <h3>TC</h3>
         </div>
         <nav>
             <ul className='flex item-center gap-6'>
                 <li>
-                    <Link href='/'>Home</Link>
+                    <Link href='/'>HEM</Link>
                 </li>
                 <li>
-                    <Link href='/openhour'>Open Hours</Link>
+                    <Link href='/openhour'>BOKNINGAR</Link>
                 </li>
                 <li>
-                    <Link href='/courses'>Courses</Link>
+                    <Link href='/courses'>KURSER</Link>
                 </li>
             </ul>
         </nav>
