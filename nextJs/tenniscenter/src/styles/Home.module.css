@@ -5,3 +5,12 @@
 .logo{
     font-weight: bold;
 }
+#hero{
+    width: 100%;
+    height: 15rem;
+    background-color: #8eb1f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: bold 3rem sans-serif ;
+}
