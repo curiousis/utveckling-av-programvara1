@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import style from '../styles/Home.module.css'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
@@ -24,8 +25,8 @@ export default function Home() {
         <div className={style.imageContainer}>
           <Image src='/tennis.jpg'  width={800} height={800} alt='tennis pic'/>
         </div>
-       
       </section>
+      <Footer/>
     </main>
   )
 }
