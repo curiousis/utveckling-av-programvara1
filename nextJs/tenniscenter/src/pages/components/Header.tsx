@@ -14,10 +14,10 @@ const Header = () => {
                     <Link href='/'>HEM</Link>
                 </li>
                 <li>
-                    <Link href='/openhour'>BOKNINGAR</Link>
+                    <Link href='/pricelist'>PRISLISTA</Link>
                 </li>
                 <li>
-                    <Link href='/courses'>KURSER</Link>
+                    <Link href='/bookings'>BOKNINGAR</Link>
                 </li>
             </ul>
         </nav>

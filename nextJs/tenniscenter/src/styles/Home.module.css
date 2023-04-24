@@ -4,6 +4,20 @@
     color: #e9e9e9;
 }
 
+.table{
+    width: 100%;
+}
+.tr:nth-child(even){
+    background-color: #7d85a7;
+}
+.tr td{
+    padding: 1.2rem .2rem;
+    text-align: center;
+}
+#tableContainer{
+    flex-direction: column;
+
+}
 #main{
     background-color: #e9e9e9;
     color: #2c2c2c;
@@ -23,7 +37,7 @@
     width: 80%;
     gap: 3rem;
 }
-.description,.footer,#hero{
+.description,.footer,#hero,#tableContainer{
     display: flex;
     justify-content: center;
     align-items: center;
