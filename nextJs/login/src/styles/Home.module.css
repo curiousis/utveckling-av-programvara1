@@ -1,0 +1,18 @@
+.main{
+    background-color: #2d2b2b;
+}
+.input{
+    width: 50rem;
+    color: #2d2b2b;
+    padding: 1.2rem;
+}
+#button,.input{
+    height: 3rem;
+    border: .02rem #000000 solid;
+    outline: .02rem #000000 solid;
+    border-radius: .5rem;
+}
+#button{
+    background-color: #262422;
+
+}
