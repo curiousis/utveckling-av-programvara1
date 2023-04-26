@@ -7,6 +7,10 @@
 .table{
     width: 100%;
 }
+.table thead{
+    background-color: #5a689f;
+    color: #e9e9e9;
+}
 .tr:nth-child(even){
     background-color: #7d85a7;
 }
@@ -21,6 +25,7 @@
 #main{
     background-color: #e9e9e9;
     color: #2c2c2c;
+    width: 100%;
 }
 .logo{
     font-weight: bold;
@@ -34,10 +39,11 @@
 }
 .description{
     padding: 4rem 0;
-    width: 80%;
+    width: 85%;
     gap: 3rem;
+    margin: 0 auto;
 }
-.description,.footer,#hero,#tableContainer{
+.description,.footer,#hero{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +54,7 @@
 .heading{
     font-weight: bold;
     padding: 1.2rem 0;
+    font-size: 1.5rem;
 }
 .imageContainer{
     width: 40%;

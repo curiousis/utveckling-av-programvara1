@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <section className={style.description}>
         <div className={style.desContainer}>
-          <h3 className={style.heading}>VÄLKOMMEN TILL JAKOBSTADS TENNISCENTER</h3>
+          <h2 className={style.heading}>VÄLKOMMEN TILL JAKOBSTADS TENNISCENTER</h2>
           <p>
             Jakobstad Tenniscenter är ett trävligt och avslappnat centrum för olika bollspel.
              Den trivsamma hallen är idealisk för tennis,  badminton, squash och pingis. 
