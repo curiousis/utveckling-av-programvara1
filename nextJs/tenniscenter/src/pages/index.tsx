@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <main className="flex w-full flex-col items-center" id={style.main}>
+    <main className="flex w-full flex-col items-center min-height-screen`" id={style.main}>
       <Header />
       <Hero />
       <section className={style.description}>

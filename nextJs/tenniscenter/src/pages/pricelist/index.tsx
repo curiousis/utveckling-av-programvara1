@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 const index = () => {
   return (
-    <main id={style.main}>
+    <main  className='min-height-screen' id={style.main}>
         <Header/>
         <section className={style.description} id={style.tableContainer}>
             <h2 className={style.heading}>Tenniscenter Hinnasto 2023</h2>
