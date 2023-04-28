@@ -1,0 +1,29 @@
+body{
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+body,form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 90%;
+    gap: 2rem;
+    margin: 0 auto;
+}
+form input{
+    width: 50%;
+    padding: .2rem .5rem;
+}
+form button,form input{
+    height: 1.5rem;
+    font-size: 1rem;
+    border: 1px #9a9a8a solid;
+    outline: 1px #9a9a8a solid;
+    border-radius: .5rem;
+}
+form button:focus,form input:focus{
+    outline: 2px #9a9a8a solid;
+}

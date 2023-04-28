@@ -4,10 +4,10 @@ const result = document.querySelector("#message");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const userInput = parseInt(document.querySelector("#userInput").value);
-  userInput === ""
+  userInput == " "
     ? (result.innerHTML = "You have not entered a correct age")
     : userInput < 0
-    ? (result.innerHTML = "Pick a correct number")
+    ? (result.innerHTML = "Pick a correct age")
     : userInput >= 0 && userInput <= 12
     ? (result.innerHTML = `You're a child`)
     : userInput > 12 && userInput <= 19
