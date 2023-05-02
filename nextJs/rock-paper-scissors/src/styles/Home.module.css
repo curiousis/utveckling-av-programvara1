@@ -1,0 +1,23 @@
+.main{
+    background-color: #a08d8d;
+    color: #202020;
+    font-family: sans-serif;
+}
+.buttonContainer button{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    background: #662d2d;
+    color: #fff;
+    border-radius: .5rem;
+    box-shadow: 5px 5px #00000033;
+}
+.results p span{
+    font-size: 1.6rem;
+    color: #662d2d;
+    padding: .5rem;
+}
+.buttonContainer button:focus{
+    background-color: #451b1b;
+    outline: #662d2d 2px solid;
+}
