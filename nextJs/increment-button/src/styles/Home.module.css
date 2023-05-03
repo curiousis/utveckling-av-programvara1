@@ -1,0 +1,10 @@
+.button{
+    background-color: grey;
+    width: 8rem;
+    height: 3rem;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+}
+.main{
+    font-size: 5rem;
+}
