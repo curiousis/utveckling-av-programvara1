@@ -1,0 +1,23 @@
+.table{
+    min-width: 80%;
+    margin: 0 auto;
+}
+.table tbody > tr:nth-child(odd){
+    background-color: grey;    
+}
+.table td{
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+.heading{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.button{
+    background-color: grey;
+    padding: .5rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: .5rem;
+}
