@@ -1,0 +1,24 @@
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128,.5);
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.background.open{
+    display: flex;
+}
+.box{
+    background-color: white;
+    border-radius: 4px;
+    padding: 1rem;
+    color: black;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .5);
+    width: 60%;
+}
