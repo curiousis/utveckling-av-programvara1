@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from '../styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,15 +9,36 @@ export default function Home() {
 
   const [number,setNumber] = useState(0)
 
+  useEffect(()=>{
+    const local = JSON.parse(localStorage.getItem('number')!)
+  
+    if(local){
+      setNumber(local)
+    } else{
+      setNumber(number)
+    }
+
+  },[])
+  
+  
   function increment(){
-     setNumber(number + 1)
+    setNumber((prevNumber) => {
+      const newNumber = prevNumber + 1;
+      localStorage.setItem("number", JSON.stringify(newNumber));
+      return newNumber;
+    });
   }
 
   function decrement(){  
-    setNumber(number - 1)
+    setNumber((prevNumber) => {
+      const newNumber = prevNumber - 1;
+      localStorage.setItem("number", JSON.stringify(newNumber));
+      return newNumber;
+    });
   }
   function reset() { 
     setNumber(0)  
+    localStorage.setItem('number',JSON.stringify(number))
   }
 
   return (
