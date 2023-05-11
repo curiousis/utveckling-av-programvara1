@@ -14,11 +14,20 @@ export default function Home() {
 
     useEffect(()=>{
       const local = JSON.parse(localStorage.getItem('contacts')!)
-      setContact([
-        { name:'Isra Banda',phonenumber:'0134324324',},
-        {name:'Sara Ben',phonenumber:'0423235421'},
-        {name:'John Sam',phonenumber:'0423432343'}
-      ])
+
+      if(local){
+
+        setContact(local)
+
+      }else{
+
+        setContact([
+          { name:'Isra Banda',phonenumber:'0134324324',},
+          {name:'Sara Ben',phonenumber:'0423235421'},
+          {name:'John Sam',phonenumber:'0423432343'}
+        ])
+
+      }
     },[])
 
     const [name,setName]=useState('')
@@ -65,10 +74,10 @@ export default function Home() {
         </tbody>
       </table>
       <Modal open={isOpen} onClose={()=>setIsOpen(false)}>
-        <div className={`flex justify-evenly items-center flex-col ${style.inputContainer}`}>
+        <div className={`flex justify-between items-center flex-col gap-5 p-10 ${style.inputContainer}`}>
           <input placeholder='name'onChange={(e)=>setName(e.target.value)}/>
           <input placeholder='phone number' onChange={(e)=>setPhonenumber(e.target.value)}/>
-          <button onClick={addContact}> Add </button>
+          <button onClick={addContact} className='text-white'> Add </button>
         </div>
       </Modal>
     </main>

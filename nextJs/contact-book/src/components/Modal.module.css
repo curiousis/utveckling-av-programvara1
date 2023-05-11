@@ -19,6 +19,6 @@
     border-radius: 4px;
     padding: 1rem;
     color: black;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .5);
     width: 60%;
 }
