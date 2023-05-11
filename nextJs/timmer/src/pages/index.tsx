@@ -16,7 +16,7 @@ export default function Home() {
       }
     },[start]);
   
-    function onStop(){
+    function onStop(){ 
       setStart(false)
     }
   return (
