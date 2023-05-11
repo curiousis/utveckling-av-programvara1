@@ -1,8 +1,5 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { useEffect, useState } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+import { useEffect, useState } from 'react'
 
 export default function Home() {
   const [time, setTime] = useState(0);
@@ -19,15 +16,17 @@ export default function Home() {
       }
     },[start]);
   
-
+    function onStop(){
+      setStart(false)
+    }
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-between p-24`}
     >
       <div className="tim">
         <button onClick={()=>setStart(true)}>Start</button>
         <button onClick={()=>setTime(0)}>Reset</button>
-        <button>Stop</button>
+        <button onClick={onStop}>Stop</button>
       </div>
       {time}
     
