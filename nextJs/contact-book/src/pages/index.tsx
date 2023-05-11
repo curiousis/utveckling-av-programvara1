@@ -13,7 +13,7 @@ export default function Home() {
     const [isOpen,setIsOpen] = useState(false)
 
     useEffect(()=>{
-      localStorage.getItem('contacts')
+      const local = JSON.parse(localStorage.getItem('contacts')!)
       setContact([
         { name:'Isra Banda',phonenumber:'0134324324',},
         {name:'Sara Ben',phonenumber:'0423235421'},
