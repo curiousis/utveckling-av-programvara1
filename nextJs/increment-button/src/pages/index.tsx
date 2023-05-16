@@ -37,8 +37,12 @@ export default function Home() {
     });
   }
   function reset() { 
-    setNumber(0)  
-    localStorage.setItem('number',JSON.stringify(number))
+    setNumber(()=>{
+      const newNumber = 0
+      localStorage.setItem('number',JSON.stringify(newNumber))
+      return newNumber
+    }
+    )
   }
 
   return (
