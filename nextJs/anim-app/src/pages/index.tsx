@@ -7,10 +7,6 @@ export default function Home() {
   return (
     <main
     >
-      {//<motion.div style={{scaleX:scrollYProgress,background: 'red',position:'fixed',top:0,left:0,right:0,height:'20px',width:'100vw'}} className=""></motion.div>
-       // <motion.div style={{}} initial={{x: '-100vw'}} animate={{x:0}} transition={{duration:1}} className="h-48 w-48 bg-amber-700 shadow-sm rounded-sm"></motion.div>
-       // <motion.div initial={{x: '-100vw'}} animate={{x:0}} transition={{duration:1}} className="h-48 w-48 bg-lime-700 shadow-sm rounded-full"></motion.div>
-      }
       <div className="flex flex-col min-h-screen">
       <div className="bg-gray-700 flex gap-5 p-10 items-center justify-end text-white py-4">
         <motion.div   whileTap={{ scale: 1.1 }} className="bg-gray-500 h-8 w-24"></motion.div>
