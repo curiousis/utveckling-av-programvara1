@@ -1,183 +1,83 @@
 const button = document.querySelector("button");
 const canvasDice = document.querySelector(".canvasDice");
-const sides = ["one", "two", "three", "four", "five", "six"];
+const sides = [
+  drawSideOne,
+  drawSideTwo,
+  drawSideThree,
+  drawSideFour,
+  drawSideFive,
+  drawSideSix,
+];
+const dotRadius = 10;
+const dotSpacing = 50;
+const centerX = canvasDice.width / 2;
+const centerY = canvasDice.height / 2;
 
-button.addEventListener("click", () => {
+button.addEventListener("click", rollDice);
+
+function rollDice() {
   const randomNumber = Math.floor(Math.random() * sides.length);
-  canvasDice.innerHTML = sides[randomNumber];
-  drawSideFive();
-});
+  canvasDice.classList.add("dice-animation");
 
-function drawSideOne() {
+  setTimeout(() => {
+    canvasDice.classList.remove("dice-animation");
+    canvasDice.innerHTML = sides[randomNumber]();
+  }, 1000);
+}
+function clearCanvas() {
   const context = canvasDice.getContext("2d");
   context.clearRect(0, 0, canvasDice.width, canvasDice.height);
+}
+
+function drawDot(x, y) {
+  const context = canvasDice.getContext("2d");
   context.beginPath();
-  context.arc(canvasDice.width / 2, canvasDice.height / 2, 5, 0, 2 * Math.PI);
+  context.arc(x, y, dotRadius, 0, 2 * Math.PI);
+  context.closePath();
   context.fill();
+}
+
+function drawSideOne() {
+  clearCanvas();
+  drawDot(centerX, centerY);
 }
 
 function drawSideTwo() {
-  const context = canvasDice.getContext("2d");
-  context.clearRect(0, 0, canvasDice.width, canvasDice.height);
-  context.beginPath();
-  context.arc(canvasDice.width / 3, canvasDice.height / 3, 5, 0, 2 * Math.PI);
-  context.arc(
-    (2 * canvasDice.width) / 3,
-    (2 * canvasDice.height) / 3,
-    5,
-    0,
-    2 * Math.PI
-  );
-  context.fill();
+  clearCanvas();
+  drawDot(centerX + dotSpacing, centerY + dotSpacing);
+  drawDot(centerX - dotSpacing, centerY - dotSpacing);
 }
 
 function drawSideThree() {
-  const context = canvasDice.getContext("2d");
-  const dotRadius = 5;
-  const dotSpacing = 50;
-
-  context.clearRect(0, 0, canvasDice.width, canvasDice.height);
-  const centerX = canvasDice.width / 2;
-  const centerY = canvasDice.height / 2;
-
-  context.beginPath();
-  context.arc(
-    centerX - dotSpacing,
-    centerY - dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-
-  context.arc(centerX, centerY, dotRadius, 0, 2 * Math.PI);
-
-  context.arc(
-    centerX + dotSpacing,
-    centerY + dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.fill();
-  context.closePath();
+  clearCanvas();
+  drawDot(centerX, centerY);
+  drawDot(centerX + dotSpacing, centerY + dotSpacing);
+  drawDot(centerX - dotSpacing, centerY - dotSpacing);
 }
 
 function drawSideFour() {
-  const context = canvasDice.getContext("2d");
-  const dotRadius = 5;
-  const dotSpacing = 50;
-
-  context.clearRect(0, 0, canvasDice.width, canvasDice.height);
-
-  const centerX = canvasDice.width / 2;
-  const centerY = canvasDice.height / 2;
-  context.fillStyle = "black";
-
-  context.beginPath();
-  context.arc(
-    centerX - dotSpacing,
-    centerY - dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
-  context.beginPath();
-  context.arc(
-    centerX + dotSpacing,
-    centerY - dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
-  context.beginPath();
-  context.arc(
-    centerX - dotSpacing,
-    centerY + dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
-  context.beginPath();
-  context.arc(
-    centerX + dotSpacing,
-    centerY + dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
+  clearCanvas();
+  drawDot(centerX + dotSpacing, centerY + dotSpacing);
+  drawDot(centerX + dotSpacing, centerY - dotSpacing);
+  drawDot(centerX - dotSpacing, centerY + dotSpacing);
+  drawDot(centerX - dotSpacing, centerY - dotSpacing);
 }
 
 function drawSideFive() {
-  const context = canvasDice.getContext("2d");
-  const dotRadius = 5;
-  const dotSpacing = 50;
-
-  const centerX = canvasDice.width / 2;
-  const centerY = canvasDice.height / 2;
-
-  context.clearRect(0, 0, canvasDice.width, canvasDice.height);
-
-  context.beginPath();
-  context.arc(
-    centerX - dotSpacing,
-    centerY - dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
-  context.beginPath();
-  context.arc(
-    centerX + dotSpacing,
-    centerY + dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
-  context.beginPath();
-  context.arc(centerX, centerY, dotRadius, 0, 2 * Math.PI);
-  context.closePath();
-  context.fill();
-
-  context.beginPath();
-  context.arc(
-    centerX + dotSpacing,
-    centerY - dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
-
-  context.beginPath();
-  context.arc(
-    centerX - dotSpacing,
-    centerY + dotSpacing,
-    dotRadius,
-    0,
-    2 * Math.PI
-  );
-  context.closePath();
-  context.fill();
+  clearCanvas();
+  drawDot(centerX + dotSpacing, centerY + dotSpacing);
+  drawDot(centerX - dotSpacing, centerY - dotSpacing);
+  drawDot(centerX, centerY);
+  drawDot(centerX + dotSpacing, centerY - dotSpacing);
+  drawDot(centerX - dotSpacing, centerY + dotSpacing);
 }
 
 function drawSideSix() {
-  const context = canvasDice.getContext("2d");
-  const dotRadius = 5;
-  const dotSpacing = 50;
-  context.clearRect(0, 0, canvasDice.width, canvasDice.height);
-  const centerX = canvasDice.width / 2;
-  const centerY = canvasDice.height / 2;
+  clearCanvas();
+  drawDot(centerX + dotSpacing, centerY + dotSpacing);
+  drawDot(centerX - dotSpacing, centerY - dotSpacing);
+  drawDot(centerX + dotSpacing, centerY);
+  drawDot(centerX - dotSpacing, centerY);
+  drawDot(centerX + dotSpacing, centerY - dotSpacing);
+  drawDot(centerX - dotSpacing, centerY + dotSpacing);
 }

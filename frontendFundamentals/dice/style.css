@@ -15,5 +15,30 @@ canvas {
     width: 200px;
     height: 200px;
     border: .1px solid #7f7f7f;
-    margin: 20px;
+    border-radius: .5rem;
 }
+
+.dice-animation {
+    animation-name: rollAnimation;
+    animation-duration: 1.05s;
+    transition: ease-in-out;
+  }
+  
+  @keyframes rollAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    75% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
