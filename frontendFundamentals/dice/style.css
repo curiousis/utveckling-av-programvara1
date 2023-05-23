@@ -5,28 +5,47 @@
 }
 body{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     line-height: 1.5;
     font-size: 1.3rem;
+    background-color: #d7d4d4;
 }
 canvas {
     width: 200px;
     height: 200px;
-    border: .1px solid #7f7f7f;
-    border-radius: .5rem;
-}
 
+    background-color: aquamarine;
+}
+canvas,button{
+  border: .1px solid #7f7f7f;
+  border-radius: .5rem;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, .5);
+}
+button{
+  width: 15%;
+  height: 2.5rem;
+  color: #141414;
+  font-size: 1rem;
+  font-weight: bold;
+}
+button:focus{
+  background-color: #7f7f7f;
+  color: #fff;
+  border: 2px solid #141414;
+}
 .dice-animation {
     animation-name: rollAnimation;
     animation-duration: 1.05s;
-    transition: ease-in-out;
+    transition: 2s ease-in-out;
   }
   
   @keyframes rollAnimation {
     0% {
       transform: rotate(0deg);
+
     }
     25% {
       transform: rotate(180deg);

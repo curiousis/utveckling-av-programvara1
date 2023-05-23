@@ -22,7 +22,7 @@ function rollDice() {
   setTimeout(() => {
     canvasDice.classList.remove("dice-animation");
     canvasDice.innerHTML = sides[randomNumber]();
-  }, 1000);
+  }, 1500);
 }
 function clearCanvas() {
   const context = canvasDice.getContext("2d");
