@@ -34,8 +34,7 @@ export default function Home() {
               <h4>{emoji.title}</h4>
               <span>{emoji.symbol}</span>
             </div>
-
-          ).slice(0,20)
+          )
         }
       </div>
     </main>
