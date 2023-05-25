@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  background-color: #718787;
+}
